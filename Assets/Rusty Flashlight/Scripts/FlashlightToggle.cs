@@ -6,11 +6,12 @@ using UnityEngine.Experimental.GlobalIllumination;
 public class FlashlightToggle : MonoBehaviour
 {
     public GameObject lightGO;
-    public MeshRenderer flashlight; //light gameObject to work with
+    public GameObject flashlight; //light gameObject to work with
     public bool isOn = false; //is flashlight on or off?
-    public Material flashlightOn, flashlightOff;
+    public Material flashlightOn, flashlightOff,diffuse;
+    public AudioSource foley_on, foley_off;
 
-    Material[] m = new Material[3];
+
 
     // Use this for initialization
     void Start()
@@ -27,18 +28,25 @@ public class FlashlightToggle : MonoBehaviour
           //turn light on
           if (isOn)
           {
-          lightGO.SetActive(true);
-            m = flashlight.materials;
-            m[1] = new Material(flashlightOn); 
-            m[2] = new Material(flashlightOn);
-          }
+              lightGO.SetActive(true);
+              Material[] materialsArray = flashlight.GetComponent<MeshRenderer>().materials;
+              materialsArray[0] = flashlightOn;
+              materialsArray[1] = flashlightOn;
+              materialsArray[2] = diffuse;
+              flashlight.GetComponent<Renderer>().materials = materialsArray;
+              foley_on.Play();
+
+            }
           //turn light off
           else
           {
-          lightGO.SetActive(false);
-            m = flashlight.materials;
-            m[1] = new Material(flashlightOff);
-            m[2] = new Material(flashlightOff);
-        }
+              lightGO.SetActive(false);
+              Material[] materialsArray = flashlight.GetComponent<Renderer>().materials;
+              materialsArray[0] = flashlightOff;
+              materialsArray[1] = flashlightOff;
+              materialsArray[2] = diffuse;
+              flashlight.GetComponent<Renderer>().materials = materialsArray;
+              foley_off.Play();
+            }
     }
 }
