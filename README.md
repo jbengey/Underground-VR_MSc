@@ -2,7 +2,7 @@
 
 This is a small concept project used to explore audio and visual components within the Unity Engine. The VR experience is based in a small underground tunnel with a handful of added interactions that are both audible and visual.
 <br><br>
-[![](https://github.com/jbengey/ForestFire-VR_MSc/blob/master/GITHUB_video_image.png?raw=true)](http://www.youtube.com/watch?v=_uU5WR56pBc "Showcase")
+[![](https://github.com/jbengey/Underground-VR_MSc/blob/main/Thumbnail.jpg?raw=true)](http://www.youtube.com/watch?v=_uU5WR56pBc "Showcase")
 
 ## Features:
 
