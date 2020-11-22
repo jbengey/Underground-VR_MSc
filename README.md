@@ -20,7 +20,7 @@ Throughout the scene there is a plethora of directional sounds: Character pain s
 <br><br>
 
 ## Release Information
-Current Version 1.0.0 - [Download](https://github.com/jbengey/ForestFire-VR_MSc/releases/download/V1.0/ForestFire-RELEASE-V1.zip)
+Current Version 1.0.0 - [Download](https://github.com/jbengey/Underground-VR_MSc/releases/download/V1.0/Underground_VR_V1.zip)
 <br><br>
 
 ### Tested with the following:
